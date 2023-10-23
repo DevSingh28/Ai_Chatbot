@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+        <style>
+        body {
+
+            background-image: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg');
+            background-repeat: no-repeat;
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body align="center">
+    <h1>AI Chatbot</h1>
+    <form method="POST">
+        <label for="user_input">Enter your query:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if user_input %}
+        <h2>User Input:</h2>
+        <p>{{ user_input }}</p>
+        <h2>AI Response:</h2>
+        <p style="color:white">{{ response }}</p>
+    {% endif %}
+</body>
+</html>
